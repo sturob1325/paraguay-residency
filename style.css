@@ -59,20 +59,18 @@ nav a {
 
 nav a:hover { color: var(--accent-color); }
 
-/* THIS IS THE CLASS THAT MAKES THE CURRENT PAGE BLUE */
 .active-link {
     color: var(--accent-color) !important;
     font-weight: 700 !important;
 }
 
-/* --- "FLOATING BUBBLE" DROPDOWN MENU --- */
+/* --- DROPDOWN MENU --- */
 .dropdown {
     position: relative;
     display: inline-block;
     height: 100%;
 }
 
-/* Invisible Bridge */
 .dropdown::after {
     content: '';
     position: absolute;
@@ -88,19 +86,13 @@ nav a:hover { color: var(--accent-color); }
     position: absolute;
     background-color: #ffffff;
     min-width: 260px;
-    
-    /* ROUNDED & FLOATING STYLING */
     border-radius: 12px; 
     box-shadow: 0 10px 40px rgba(0,0,0,0.15); 
-    border: 1px solid rgba(0,0,0,0.05); 
-    
-    /* POSITIONING */
+    border: 1px solid rgba(0,0,0,0.05);
     top: 140%; 
     left: -20px;
     z-index: 2000;
-    padding: 8px; 
-    
-    /* Animation */
+    padding: 8px;
     animation: fadeInUp 0.2s ease forwards;
 }
 
@@ -124,12 +116,6 @@ nav a:hover { color: var(--accent-color); }
     background-color: #f0f9ff; 
     color: var(--accent-color) !important;
     transform: translateX(5px);
-}
-
-/* Fix active state inside dropdown */
-.dropdown-content a.active-link {
-    background-color: #f0f9ff;
-    color: var(--accent-color) !important;
 }
 
 @keyframes fadeInUp {
@@ -272,8 +258,22 @@ footer { background-color: #0f1724; color: #fff; padding: 80px 5% 30px; font-siz
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 20px; text-align: center; }
-    .hero { align-items: center; text-align: center; }
-    .hero h1 { font-size: 38px; }
+
+    /* Centering the Hero Content and Shifting Background for Flag */
+    .hero {
+        align-items: center;
+        text-align: center;
+        /* Shift image to pull the right-side flag into the center */
+        background-position: 80% center;
+        background-image: linear-gradient(
+            rgba(21, 36, 64, 0.85),
+            rgba(21, 36, 64, 0.85)
+        ), url('hero.jpg');
+    }
+
+    .hero h1 { font-size: 32px; padding: 0 10px; }
+    .hero h3 { margin: 0 auto 35px; font-size: 16px; padding: 0 15px; }
+
     .footer-grid { text-align: left; }
     .split-section { flex-direction: column; text-align: center; }
 }

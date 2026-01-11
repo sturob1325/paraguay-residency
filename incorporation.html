@@ -10,6 +10,7 @@
     <meta name="author" content="Grecia Cacares">
 
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -18,15 +19,42 @@
         .section-intro { text-align: center; margin-bottom: 60px; }
         .section-intro h2 { font-family: var(--font-heading); font-size: 38px; color: var(--primary-color); margin-bottom: 20px; }
 
-        /* Spacing Fix for Roadmap Title */
-        .roadmap-container { margin-top: 100px; }
+        /* Strategic Summary Box (Fiscal Design Match) */
+        .checklist-box {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+        }
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .checklist-col h3 {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+        }
+        .check-item {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 14px;
+        }
 
+        /* Roadmap Timeline */
+        .roadmap-container { margin-top: 100px; }
         .timeline { max-width: 800px; margin: 0 auto 80px; border-left: 2px solid #eee; padding-left: 40px; }
         .timeline-item { position: relative; margin-bottom: 40px; }
         .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; background: var(--accent-color); border: 4px solid white; left: -49px; top: 5px; border-radius: 50%; }
         .timeline-item h3 { font-family: var(--font-heading); color: var(--primary-color); margin-bottom: 10px; }
 
-        /* FAQ Grid (Matches other pages) */
+        /* FAQ Grid (Consistent with Residency/Fiscal) */
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -69,6 +97,7 @@
 
         @media (max-width: 768px) {
             .faq-grid { grid-template-columns: 1fr; }
+            .checklist-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -85,54 +114,75 @@
         </p>
     </div>
 
-    <div class="container">
+    <section class="container split-section">
+        <div style="flex: 1;">
+            <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-bottom: 20px;">
+                <span class="lang-en">Why Incorporate in Paraguay?</span>
+                <span class="lang-es">¿Por qué incorporar en Paraguay?</span>
+            </h2>
+            <div style="color: var(--text-light); font-size: 16px; line-height: 1.8;">
+                <p style="margin-bottom: 20px;">
+                    <span class="lang-en">Paraguay offers a highly competitive environment for international business. With a flat 10% corporate tax and a fast-track digital registration system, it is the ideal gateway for South American operations.</span>
+                    <span class="lang-es">Paraguay ofrece un entorno altamente competitivo para los negocios internacionales. Con un impuesto corporativo fijo del 10% y un sistema de registro digital acelerado, es la puerta ideal para operaciones en Sudamérica.</span>
+                </p>
+                <p>
+                    <span class="lang-en">Our legal team specializes in the <strong>EAS (Simplified Share Company)</strong> structure, which allows for 100% foreign ownership and can be established without the need for high minimum capital.</span>
+                    <span class="lang-es">Nuestro equipo legal se especializa en la estructura <strong>EAS (Empresa por Acciones Simplificadas)</strong>, que permite el 100% de propiedad extranjera y puede establecerse sin necesidad de un capital mínimo elevado.</span>
+                </p>
+            </div>
+        </div>
+        <div style="flex: 1;">
+            <img src="https://images.unsplash.com/photo-1579532566591-943b144421bc?q=80&w=1000&auto=format&fit=crop"
+                 alt="Corporate Excellence Paraguay"
+                 style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; height: 350px;">
+        </div>
+    </section>
+
+    <section class="container" style="background-color: var(--bg-light); border-radius: 8px; padding: 80px 5%;">
         <div class="section-intro">
             <h2>
                 <span class="lang-en">Modern Corporate Solutions</span>
                 <span class="lang-es">Soluciones Corporativas Modernas</span>
             </h2>
-            <p>
-                <span class="lang-en">Paraguay's EAS (Simplified Share Company) allows for single-member ownership and rapid setup. I handle the entire formation so you can trade globally in days.</span>
-                <span class="lang-es">La EAS (Empresa por Acciones Simplificadas) de Paraguay permite propiedad unipersonal y configuración rápida. Manejo toda la formación para que pueda operar globalmente en días.</span>
-            </p>
         </div>
 
         <div class="services-grid">
             <div class="service-card">
                 <i class="fa-solid fa-bolt service-icon"></i>
-                <h3>
-                    <span class="lang-en">EAS Formation</span>
-                    <span class="lang-es">Formación EAS</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Digital-first incorporation often completed within 72 hours once documents are verified.</span>
-                    <span class="lang-es">Incorporación digital completada a menudo en 72 horas una vez verificados los documentos.</span>
-                </p>
+                <h3><span class="lang-en">EAS Formation</span><span class="lang-es">Formación EAS</span></h3>
+                <p><span class="lang-en">Digital-first incorporation often completed within 72 hours once documents are verified.</span><span class="lang-es">Incorporación digital completada a menudo en 72 horas.</span></p>
             </div>
             <div class="service-card">
                 <i class="fa-solid fa-user-tie service-icon"></i>
-                <h3>
-                    <span class="lang-en">SUACE Investor Visa</span>
-                    <span class="lang-es">Visa de Inversor SUACE</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Combine company setup with a fast-tracked investor residency for shareholders.</span>
-                    <span class="lang-es">Combine la creación de la empresa con una residencia de inversor acelerada.</span>
-                </p>
+                <h3><span class="lang-en">SUACE Investor Visa</span><span class="lang-es">Visa de Inversor SUACE</span></h3>
+                <p><span class="lang-en">Combine company setup with a fast-tracked investor residency for shareholders.</span><span class="lang-es">Combine la creación de la empresa con una residencia de inversor acelerada.</span></p>
             </div>
             <div class="service-card">
                 <i class="fa-solid fa-vault service-icon"></i>
-                <h3>
-                    <span class="lang-en">Banking Support</span>
-                    <span class="lang-es">Soporte Bancario</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Assistance with corporate account documentation for local banks and fintech solutions.</span>
-                    <span class="lang-es">Asistencia con documentación de cuentas corporativas para bancos locales.</span>
-                </p>
+                <h3><span class="lang-en">Banking Support</span><span class="lang-es">Soporte Bancario</span></h3>
+                <p><span class="lang-en">Assistance with corporate account documentation for local banks and fintech solutions.</span><span class="lang-es">Asistencia con documentación de cuentas corporativas.</span></p>
             </div>
         </div>
 
+        <div class="checklist-box">
+            <div class="checklist-grid">
+                <div class="checklist-col">
+                    <h3><span class="lang-en">Structural Benefits</span><span class="lang-es">Beneficios Estructurales</span></h3>
+                    <div class="check-item"><i class="fa-solid fa-circle-check" style="color: var(--whatsapp-green);"></i> <span>100% Foreign Ownership Allowed</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check" style="color: var(--whatsapp-green);"></i> <span>No Minimum Capital Required</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check" style="color: var(--whatsapp-green);"></i> <span>Single Member (Unipersonal) Support</span></div>
+                </div>
+                <div class="checklist-col">
+                    <h3><span class="lang-en">Legal Compliance</span><span class="lang-es">Cumplimiento Legal</span></h3>
+                    <div class="check-item"><i class="fa-solid fa-circle-info" style="color: var(--accent-color);"></i> <span>Official Bylaws Drafting</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-info" style="color: var(--accent-color);"></i> <span>Public Registry Filing</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-info" style="color: var(--accent-color);"></i> <span>Tax ID (RUC) Issuance</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
         <div class="roadmap-container">
             <div class="section-intro">
                 <h2>
@@ -140,37 +190,18 @@
                     <span class="lang-es">Hoja de Ruta de Formación</span>
                 </h2>
             </div>
-
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>
-                        <span class="lang-en">Step 1: Name Reservation</span>
-                        <span class="lang-es">Paso 1: Reserva de Nombre</span>
-                    </h3>
-                    <p>
-                        <span class="lang-en">I verify and reserve your chosen business name with the Ministry of Commerce.</span>
-                        <span class="lang-es">Verifico y reservo su nombre comercial elegido ante el Ministerio de Industria y Comercio.</span>
-                    </p>
+                    <h3><span class="lang-en">Step 1: Name Reservation</span><span class="lang-es">Paso 1: Reserva de Nombre</span></h3>
+                    <p><span class="lang-en">I verify and reserve your chosen business name with the Ministry of Commerce.</span><span class="lang-es">Verifico y reservo su nombre comercial elegido.</span></p>
                 </div>
                 <div class="timeline-item">
-                    <h3>
-                        <span class="lang-en">Step 2: Bylaws & Drafting</span>
-                        <span class="lang-es">Paso 2: Estatutos y Redacción</span>
-                    </h3>
-                    <p>
-                        <span class="lang-en">Drafting custom corporate bylaws tailored to your specific operational needs and share structure.</span>
-                        <span class="lang-es">Redacción de estatutos corporativos personalizados adaptados a sus necesidades operativas específicas.</span>
-                    </p>
+                    <h3><span class="lang-en">Step 2: Bylaws & Drafting</span><span class="lang-es">Paso 2: Estatutos y Redacción</span></h3>
+                    <p><span class="lang-en">Drafting custom corporate bylaws tailored to your operational needs and share structure.</span><span class="lang-es">Redacción de estatutos corporativos personalizados.</span></p>
                 </div>
                 <div class="timeline-item">
-                    <h3>
-                        <span class="lang-en">Step 3: Registration</span>
-                        <span class="lang-es">Paso 3: Registro</span>
-                    </h3>
-                    <p>
-                        <span class="lang-en">Official filing with the Public Registry and Tax Authority (SET) to issue your Tax ID (RUC).</span>
-                        <span class="lang-es">Presentación oficial ante el Registro Público y la Autoridad Tributaria (SET).</span>
-                    </p>
+                    <h3><span class="lang-en">Step 3: Registration</span><span class="lang-es">Paso 3: Registro</span></h3>
+                    <p><span class="lang-en">Official filing with the Public Registry and Tax Authority (SET) to issue your Tax ID (RUC).</span><span class="lang-es">Presentación oficial ante el Registro Público y SET.</span></p>
                 </div>
             </div>
         </div>
@@ -179,35 +210,34 @@
             <span class="lang-en">Business FAQ</span>
             <span class="lang-es">Preguntas Frecuentes de Negocios</span>
         </h2>
-
         <div class="faq-container">
             <div class="faq-grid">
                 <div>
                     <details>
                         <summary><span class="lang-en">Can a foreigner own 100% of an EAS?</span><span class="lang-es">¿Puede un extranjero ser dueño del 100%?</span></summary>
-                        <div class="faq-answer"><span class="lang-en">Yes, foreigners can own 100% of the shares in an EAS company without needing a local partner.</span><span class="lang-es">Sí, los extranjeros pueden poseer el 100% de las acciones sin necesidad de un socio local.</span></div>
+                        <div class="faq-answer"><span class="lang-en">Yes, foreigners can own 100% of the shares in an EAS company without needing a local partner.</span><span class="lang-es">Sí, los extranjeros pueden poseer el 100% de las acciones.</span></div>
                     </details>
                     <details>
                         <summary><span class="lang-en">Do I need residency to start a company?</span><span class="lang-es">¿Necesito residencia para crear una empresa?</span></summary>
-                        <div class="faq-answer"><span class="lang-en">You can incorporate without residency, but you will need a local legal representative until your residency is granted.</span><span class="lang-es">Puede incorporar sin residencia, pero necesitará un representante legal local temporalmente.</span></div>
+                        <div class="faq-answer"><span class="lang-en">You can incorporate without residency, but you will need a local legal representative until your residency is granted.</span><span class="lang-es">Puede incorporar sin residencia con un representante legal local.</span></div>
                     </details>
                     <details>
                         <summary><span class="lang-en">How much capital is required?</span><span class="lang-es">¿Cuánto capital se requiere?</span></summary>
-                        <div class="faq-answer"><span class="lang-en">There is no high minimum capital requirement for an EAS. You can start with a symbolic amount.</span><span class="lang-es">No hay un requisito de capital mínimo elevado para una EAS. Puede empezar con un monto simbólico.</span></div>
+                        <div class="faq-answer"><span class="lang-en">There is no high minimum capital requirement for an EAS. You can start with a symbolic amount.</span><span class="lang-es">No hay un requisito de capital mínimo elevado para una EAS.</span></div>
                     </details>
                 </div>
                 <div>
                     <details>
                         <summary><span class="lang-en">How long does the setup take?</span><span class="lang-es">¿Cuánto tiempo toma la configuración?</span></summary>
-                        <div class="faq-answer"><span class="lang-en">The digital registration usually takes 3 to 7 business days once all documents are signed.</span><span class="lang-es">El registro digital suele tardar de 3 a 7 días hábiles una vez firmados los documentos.</span></div>
+                        <div class="faq-answer"><span class="lang-en">The digital registration usually takes 3 to 7 business days once all documents are signed.</span><span class="lang-es">El registro digital suele tardar de 3 a 7 días hábiles.</span></div>
                     </details>
                     <details>
                         <summary><span class="lang-en">Can I open a bank account for the company?</span><span class="lang-es">¿Puedo abrir una cuenta bancaria?</span></summary>
-                        <div class="faq-answer"><span class="lang-en">Yes. Once the company is registered and has a RUC, we assist you in preparing the documents for local banking.</span><span class="lang-es">Sí. Una vez registrada la empresa y con RUC, le ayudamos a preparar los documentos bancarios.</span></div>
+                        <div class="faq-answer"><span class="lang-en">Yes. Once the company is registered and has a RUC, we assist you in preparing the documents for local banking.</span><span class="lang-es">Sí. Una vez registrada la empresa le ayudamos con los documentos bancarios.</span></div>
                     </details>
                     <details>
                         <summary><span class="lang-en">What are the annual obligations?</span><span class="lang-es">¿Cuáles son las obligaciones anuales?</span></summary>
-                        <div class="faq-answer"><span class="lang-en">You must file annual tax reports and hold at least one annual assembly meeting, which we can help manage.</span><span class="lang-es">Debe presentar informes fiscales anuales y realizar al menos una asamblea anual.</span></div>
+                        <div class="faq-answer"><span class="lang-en">You must file annual tax reports and hold at least one annual assembly meeting.</span><span class="lang-es">Debe presentar informes fiscales anuales y realizar una asamblea anual.</span></div>
                     </details>
                 </div>
             </div>

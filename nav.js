@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <nav>
             <ul>
                 <li><a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a></li>
-                <li><a href="about.html"><span class="lang-en">About Me</span><span class="lang-es">Sobre M�</span></a></li>
+                <li><a href="about.html"><span class="lang-en">About Me</span><span class="lang-es">Sobre Mi</span></a></li>
                 
                 <li class="dropdown">
                     <a href="javascript:void(0)" style="cursor: default;" id="services-parent">
@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="dropdown-content">
                         <a href="residency.html">
                             <span class="lang-en">Immigration & Residency</span>
-                            <span class="lang-es">Inmigraci�n y Residencia</span>
+                            <span class="lang-es">Inmigracion y Residencia</span>
                         </a>
                         <a href="fiscal-planning.html">
                             <span class="lang-en">Fiscal Planning (Tax)</span>
-                            <span class="lang-es">Planificaci�n Fiscal</span>
+                            <span class="lang-es">Planificacion Fiscal</span>
                         </a>
                         <a href="incorporation.html">
                             <span class="lang-en">Business Incorporation</span>
-                            <span class="lang-es">Constituci�n de Empresas</span>
+                            <span class="lang-es">Constitucion de Empresas</span>
                         </a>
                     </div>
                 </li>
@@ -80,15 +80,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
                 <p>
                     <span class="lang-en">Your trusted legal partner for securing residency, citizenship, and fiscal optimization in the heart of South America.</span>
-                    <span class="lang-es">Su socio legal de confianza para asegurar residencia, ciudadan�a y optimizaci�n fiscal en el coraz�n de Am�rica del Sur.</span>
+                    <span class="lang-es">Su socio legal de confianza para asegurar residencia, ciudadania y optimizacion fiscal en el corazon de America del Sur.</span>
                 </p>
             </div>
             
             <div class="footer-col">
-                <h3><span class="lang-en">Quick Links</span><span class="lang-es">Enlaces R�pidos</span></h3>
+                <h3><span class="lang-en">Quick Links</span><span class="lang-es">Enlaces Rapidos</span></h3>
                 <ul>
                     <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Home</span><span class="lang-es">Inicio</span></a></li>
-                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">About Me</span><span class="lang-es">Sobre M�</span></a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">About Me</span><span class="lang-es">Sobre Mi</span></a></li>
                     <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
                 </ul>
             </div>
@@ -96,16 +96,16 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="footer-col">
                 <h3><span class="lang-en">Services</span><span class="lang-es">Servicios</span></h3>
                 <ul>
-                    <li><a href="residency.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Immigration</span><span class="lang-es">Inmigraci�n</span></a></li>
-                    <li><a href="fiscal-planning.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Fiscal Planning</span><span class="lang-es">Planificaci�n Fiscal</span></a></li>
+                    <li><a href="residency.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Immigration</span><span class="lang-es">Inmigracion</span></a></li>
+                    <li><a href="fiscal-planning.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Fiscal Planning</span><span class="lang-es">Planificacion Fiscal</span></a></li>
                     <li><a href="incorporation.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-en">Business Setup</span><span class="lang-es">Negocios</span></a></li>
                 </ul>
             </div>
             
             <div class="footer-col">
-                <h3><span class="lang-en">Get in Touch</span><span class="lang-es">Cont�ctenos</span></h3>
+                <h3><span class="lang-en">Get in Touch</span><span class="lang-es">Contactenos</span></h3>
                 <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> <span>World Trade Center, Asunci�n</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i> <span>World Trade Center, Asuncion</span></li>
                     <li><a href="mailto:contact@paraguaysolutions.com"><i class="fa-solid fa-envelope"></i> contact@paraguaysolutions.com</a></li>
                     <li><a href="https://wa.me/595984192950"><i class="fa-brands fa-whatsapp"></i> +595 982 123 456</a></li>
                 </ul>
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </footer>
     
-    <a href="https://wa.me/595982123456" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>`;
+    <a href="https://wa.me/595984192950" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>`;
     
     // Insert Footer at the very bottom of body
     document.body.insertAdjacentHTML('beforeend', footerHTML);
