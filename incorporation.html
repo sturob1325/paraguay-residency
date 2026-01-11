@@ -12,13 +12,64 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        .section-intro { text-align: center; margin-bottom: 80px; }
+        /* --- PAGE SPECIFIC STYLES --- */
+        .section-intro { text-align: center; margin-bottom: 60px; }
         .section-intro h2 { font-family: var(--font-heading); font-size: 38px; color: var(--primary-color); margin-bottom: 20px; }
+
+        /* Spacing Fix for Roadmap Title */
+        .roadmap-container { margin-top: 100px; }
+
         .timeline { max-width: 800px; margin: 0 auto 80px; border-left: 2px solid #eee; padding-left: 40px; }
         .timeline-item { position: relative; margin-bottom: 40px; }
         .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; background: var(--accent-color); border: 4px solid white; left: -49px; top: 5px; border-radius: 50%; }
         .timeline-item h3 { font-family: var(--font-heading); color: var(--primary-color); margin-bottom: 10px; }
+
+        /* FAQ Grid (Matches other pages) */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            align-items: start;
+            margin-top: 40px;
+        }
+        .faq-container { max-width: 1000px; margin: 0 auto; }
+        details {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            margin-bottom: 10px;
+        }
+        summary {
+            padding: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+        summary::after { content: '+'; font-size: 20px; color: var(--accent-color); font-weight: 300; }
+        details[open] summary::after { content: '-'; }
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 14px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 0;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .faq-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -54,8 +105,8 @@
                     <span class="lang-es">Formación EAS</span>
                 </h3>
                 <p>
-                    <span class="lang-en">Digital-first incorporation often completed within 72 hours.</span>
-                    <span class="lang-es">Incorporación digital completada a menudo en 72 horas.</span>
+                    <span class="lang-en">Digital-first incorporation often completed within 72 hours once documents are verified.</span>
+                    <span class="lang-es">Incorporación digital completada a menudo en 72 horas una vez verificados los documentos.</span>
                 </p>
             </div>
             <div class="service-card">
@@ -65,7 +116,7 @@
                     <span class="lang-es">Visa de Inversor SUACE</span>
                 </h3>
                 <p>
-                    <span class="lang-en">Combine company setup with a fast-tracked investor residency.</span>
+                    <span class="lang-en">Combine company setup with a fast-tracked investor residency for shareholders.</span>
                     <span class="lang-es">Combine la creación de la empresa con una residencia de inversor acelerada.</span>
                 </p>
             </div>
@@ -76,52 +127,103 @@
                     <span class="lang-es">Soporte Bancario</span>
                 </h3>
                 <p>
-                    <span class="lang-en">Assistance with corporate account documentation for local banks.</span>
+                    <span class="lang-en">Assistance with corporate account documentation for local banks and fintech solutions.</span>
                     <span class="lang-es">Asistencia con documentación de cuentas corporativas para bancos locales.</span>
                 </p>
             </div>
         </div>
 
-        <div class="section-intro">
-            <h2>
-                <span class="lang-en">Formation Roadmap</span>
-                <span class="lang-es">Hoja de Ruta de Formación</span>
-            </h2>
+        <div class="roadmap-container">
+            <div class="section-intro">
+                <h2>
+                    <span class="lang-en">Formation Roadmap</span>
+                    <span class="lang-es">Hoja de Ruta de Formación</span>
+                </h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>
+                        <span class="lang-en">Step 1: Name Reservation</span>
+                        <span class="lang-es">Paso 1: Reserva de Nombre</span>
+                    </h3>
+                    <p>
+                        <span class="lang-en">I verify and reserve your chosen business name with the Ministry of Commerce.</span>
+                        <span class="lang-es">Verifico y reservo su nombre comercial elegido ante el Ministerio de Industria y Comercio.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>
+                        <span class="lang-en">Step 2: Bylaws & Drafting</span>
+                        <span class="lang-es">Paso 2: Estatutos y Redacción</span>
+                    </h3>
+                    <p>
+                        <span class="lang-en">Drafting custom corporate bylaws tailored to your specific operational needs and share structure.</span>
+                        <span class="lang-es">Redacción de estatutos corporativos personalizados adaptados a sus necesidades operativas específicas.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>
+                        <span class="lang-en">Step 3: Registration</span>
+                        <span class="lang-es">Paso 3: Registro</span>
+                    </h3>
+                    <p>
+                        <span class="lang-en">Official filing with the Public Registry and Tax Authority (SET) to issue your Tax ID (RUC).</span>
+                        <span class="lang-es">Presentación oficial ante el Registro Público y la Autoridad Tributaria (SET).</span>
+                    </p>
+                </div>
+            </div>
         </div>
-        
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>
-                    <span class="lang-en">Step 1: Name Reservation</span>
-                    <span class="lang-es">Paso 1: Reserva de Nombre</span>
-                </h3>
-                <p>
-                    <span class="lang-en">I verify and reserve your chosen business name with the Ministry of Commerce.</span>
-                    <span class="lang-es">Verifico y reservo su nombre comercial elegido ante el Ministerio de Industria y Comercio.</span>
-                </p>
-            </div>
-            <div class="timeline-item">
-                <h3>
-                    <span class="lang-en">Step 2: Bylaws & Drafting</span>
-                    <span class="lang-es">Paso 2: Estatutos y Redacción</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Drafting custom corporate bylaws tailored to your specific operational needs.</span>
-                    <span class="lang-es">Redacción de estatutos corporativos personalizados adaptados a sus necesidades operativas específicas.</span>
-                </p>
-            </div>
-            <div class="timeline-item">
-                <h3>
-                    <span class="lang-en">Step 3: Registration</span>
-                    <span class="lang-es">Paso 3: Registro</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Official filing with the Public Registry and Tax Authority (SET).</span>
-                    <span class="lang-es">Presentación oficial ante el Registro Público y la Autoridad Tributaria (SET).</span>
-                </p>
+
+        <h2 style="text-align: center; font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-top: 100px; margin-bottom: 50px;">
+            <span class="lang-en">Business FAQ</span>
+            <span class="lang-es">Preguntas Frecuentes de Negocios</span>
+        </h2>
+
+        <div class="faq-container">
+            <div class="faq-grid">
+                <div>
+                    <details>
+                        <summary><span class="lang-en">Can a foreigner own 100% of an EAS?</span><span class="lang-es">¿Puede un extranjero ser dueño del 100%?</span></summary>
+                        <div class="faq-answer"><span class="lang-en">Yes, foreigners can own 100% of the shares in an EAS company without needing a local partner.</span><span class="lang-es">Sí, los extranjeros pueden poseer el 100% de las acciones sin necesidad de un socio local.</span></div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Do I need residency to start a company?</span><span class="lang-es">¿Necesito residencia para crear una empresa?</span></summary>
+                        <div class="faq-answer"><span class="lang-en">You can incorporate without residency, but you will need a local legal representative until your residency is granted.</span><span class="lang-es">Puede incorporar sin residencia, pero necesitará un representante legal local temporalmente.</span></div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">How much capital is required?</span><span class="lang-es">¿Cuánto capital se requiere?</span></summary>
+                        <div class="faq-answer"><span class="lang-en">There is no high minimum capital requirement for an EAS. You can start with a symbolic amount.</span><span class="lang-es">No hay un requisito de capital mínimo elevado para una EAS. Puede empezar con un monto simbólico.</span></div>
+                    </details>
+                </div>
+                <div>
+                    <details>
+                        <summary><span class="lang-en">How long does the setup take?</span><span class="lang-es">¿Cuánto tiempo toma la configuración?</span></summary>
+                        <div class="faq-answer"><span class="lang-en">The digital registration usually takes 3 to 7 business days once all documents are signed.</span><span class="lang-es">El registro digital suele tardar de 3 a 7 días hábiles una vez firmados los documentos.</span></div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Can I open a bank account for the company?</span><span class="lang-es">¿Puedo abrir una cuenta bancaria?</span></summary>
+                        <div class="faq-answer"><span class="lang-en">Yes. Once the company is registered and has a RUC, we assist you in preparing the documents for local banking.</span><span class="lang-es">Sí. Una vez registrada la empresa y con RUC, le ayudamos a preparar los documentos bancarios.</span></div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">What are the annual obligations?</span><span class="lang-es">¿Cuáles son las obligaciones anuales?</span></summary>
+                        <div class="faq-answer"><span class="lang-en">You must file annual tax reports and hold at least one annual assembly meeting, which we can help manage.</span><span class="lang-es">Debe presentar informes fiscales anuales y realizar al menos una asamblea anual.</span></div>
+                    </details>
+                </div>
             </div>
         </div>
     </div>
+
+    <section class="container" style="text-align: center; padding: 100px 5%;">
+        <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-bottom: 20px;">
+            <span class="lang-en">Ready to Expand into Paraguay?</span>
+            <span class="lang-es">¿Listo para expandirse en Paraguay?</span>
+        </h2>
+        <a href="contact.html" class="btn-main">
+            <span class="lang-en">Consult an Attorney</span>
+            <span class="lang-es">Consultar a una Abogada</span>
+        </a>
+    </section>
 
     <script src="nav.js"></script>
 </body>
