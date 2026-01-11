@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residency Services - Paraguay Residency Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- PAGE SPECIFIC CSS (Only for Residency Page) --- */
+
+        /* 1. Checklist & Visa Section */
+        .checklist-box { 
+            background-color: var(--primary-color); 
+            color: var(--white); 
+            padding: 40px; 
+            border-radius: 12px; 
+            margin: 50px 0; 
+        }
+
+        .checklist-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+        }
+
+        .checklist-col h3 { 
+            margin-bottom: 20px; 
+            border-bottom: 1px solid rgba(255,255,255,0.2); 
+            padding-bottom: 10px; 
+            font-family: var(--font-heading); 
+            color: var(--accent-color); 
+        }
+
+        .check-item { 
+            margin-bottom: 15px; 
+            display: flex; 
+            gap: 15px; 
+            align-items: center; 
+            font-size: 14px; 
+        }
+
+        .check-item i { color: var(--accent-color); font-size: 16px; }
+
+        /* 2. Subtle Visa Alert Box */
+        .visa-alert {
+            margin-top: 15px; 
+            padding: 15px; 
+            background: rgba(255,255,255,0.08); 
+            border-radius: 6px; 
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* 3. FAQ 2-Column Grid */
+        .faq-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+            gap: 20px; 
+            align-items: start;
+            margin-top: 40px;
+        }
+
+        .faq-container { max-width: 1000px; margin: 0 auto; }
+
+        details {
+            background-color: var(--white); 
+            border-radius: 8px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden; 
+            border: 1px solid #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        summary {
+            padding: 20px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            position: relative; 
+            list-style: none;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            color: var(--primary-color); 
+            font-size: 14px;
+        }
+
+        summary::after { content: '+'; font-size: 20px; color: var(--accent-color); font-weight: 300; }
+        details[open] summary::after { content: '-'; }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px; 
+            color: var(--text-light); 
+            line-height: 1.6; 
+            font-size: 14px;
+            border-top: 1px solid #f0f0f0; 
+            margin-top: 0; 
+            padding-top: 15px;
+        }
+
+        /* Mobile Fix */
+        @media (max-width: 768px) {
+            .checklist-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-hero">
+        <h1>
+            <span class="lang-en">Immigration & Residency</span>
+            <span class="lang-es">Inmigración y Residencia</span>
+        </h1>
+        <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">
+            <span class="lang-en">The comprehensive legal pathway to securing your status in the heart of South America.</span>
+            <span class="lang-es">El camino legal integral para asegurar su estatus en el corazón de América del Sur.</span>
+        </p>
+    </div>
+
+    <section class="container split-section">
+        <div style="flex: 1;">
+            <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-bottom: 20px;">
+                <span class="lang-en">Why Paraguay?</span>
+                <span class="lang-es">¿Por Qué Paraguay?</span>
+            </h2>
+            <div style="color: var(--text-light); font-size: 16px; line-height: 1.8;">
+                <p style="margin-bottom: 20px;">
+                    <span class="lang-en">Paraguay currently offers the most accessible residency program in the world. It is a territorial tax country, meaning foreign income is generally tax-exempt.</span>
+                    <span class="lang-es">Paraguay ofrece actualmente el programa de residencia más accesible del mundo. Es un país de impuestos territoriales, lo que significa que los ingresos extranjeros generalmente están exentos de impuestos.</span>
+                </p>
+                <p>
+                    <span class="lang-en">Whether you are looking for a "Plan B," a new investment frontier, or a peaceful place to retire, obtaining legal residency grants you the right to live and work here immediately.</span>
+                    <span class="lang-es">Ya sea que busque un "Plan B", una nueva frontera de inversión o un lugar tranquilo para retirarse, obtener la residencia legal le otorga el derecho a vivir y trabajar aquí de inmediato.</span>
+                </p>
+            </div>
+        </div>
+        <div style="flex: 1;">
+            <img src="palacio.png" 
+                 alt="Palacio de los López, Asunción" 
+                 style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; height: 350px;">
+        </div>
+    </section>
+
+    <section class="container" style="background-color: var(--bg-light); border-radius: 8px;">
+        <h2 style="text-align: center; font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-bottom: 50px;">
+            <span class="lang-en">The Road to Residency</span>
+            <span class="lang-es">El Camino a la Residencia</span>
+        </h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-clipboard-check service-icon"></i>
+                <h3><span class="lang-en">1. Preparation</span><span class="lang-es">1. Preparación</span></h3>
+                <p><span class="lang-en">Send me scans of your documents. I audit them to ensure your apostilles are correct before you book your flight.</span><span class="lang-es">Envíeme escaneos de sus documentos. Los audito para asegurar que sus apostillas sean correctas antes de reservar vuelo.</span></p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-plane-arrival service-icon"></i>
+                <h3><span class="lang-en">2. The Visit</span><span class="lang-es">2. La Visita</span></h3>
+                <p><span class="lang-en">You visit Asunción for 3-5 days. I accompany you to the police and migration offices. No queues, no stress.</span><span class="lang-es">Visita Asunción por 3-5 días. Lo acompaño a las oficinas. Sin colas, sin estrés.</span></p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-id-card service-icon"></i>
+                <h3><span class="lang-en">3. Approval</span><span class="lang-es">3. Aprobación</span></h3>
+                <p><span class="lang-en">Once approved, I collect your Permanent Residency card and Cédula. You do not need to fly back.</span><span class="lang-es">Una vez aprobado, recojo su tarjeta de Residencia y Cédula. No necesita volver a volar.</span></p>
+            </div>
+        </div>
+
+        <div class="checklist-box">
+            <div class="checklist-grid">
+                <div class="checklist-col">
+                    <h3>
+                        <span class="lang-en">Bring From Home</span>
+                        <span class="lang-es">Traer de Casa</span>
+                    </h3>
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> <span>Original Birth Certificate (Apostilled)</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> <span>Criminal Record Check (Apostilled)</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> <span>Marriage Certificate (If applicable, Apostilled)</span></div>
+                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> <span>Valid Passport</span></div>
+                </div>
+
+                <div class="checklist-col">
+                    <h3>
+                        <span class="lang-en">Obtained in Paraguay</span>
+                        <span class="lang-es">Obtenido en Paraguay</span>
+                    </h3>
+                    <div class="check-item"><i class="fa-solid fa-file-medical"></i> <span>Medical Certificate (Certificado Médico)</span></div>
+                    <div class="check-item"><i class="fa-solid fa-user-secret"></i> <span>Interpol Record Check</span></div>
+                    <div class="check-item"><i class="fa-solid fa-file-signature"></i> <span>Life & Residence Affidavit</span></div>
+                    <div class="check-item"><i class="fa-solid fa-gavel"></i> <span>National Police Report (Informática)</span></div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); font-style: italic; opacity: 0.9;">
+                <span class="lang-en"><strong>Important:</strong> Please scan and email these documents to me for verification <u>before</u> booking your flight.</span>
+                <span class="lang-es"><strong>Importante:</strong> Por favor escanee y envíeme estos documentos para verificación <u>antes</u> de reservar su vuelo.</span>
+            </div>
+
+            <div class="visa-alert">
+                <p style="margin: 0; font-size: 14px; color: white;">
+                    <i class="fa-solid fa-earth-americas" style="color: var(--accent-color); margin-right: 8px;"></i>
+                    <span class="lang-en"><strong>Visa Requirement:</strong> While USA, UK, EU, and Canadian citizens do not need a visa, citizens of <strong>Australia, New Zealand, China, and Taiwan</strong> DO require an entry visa.</span>
+                    <span class="lang-es"><strong>Requisito de Visa:</strong> Mientras ciudadanos de EE.UU., Reino Unido, UE y Canadá no necesitan visa, los ciudadanos de <strong>Australia, Nueva Zelanda, China y Taiwán</strong> SÍ requieren visa.</span>
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 style="text-align: center; font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-bottom: 50px;">
+            <span class="lang-en">Frequently Asked Questions</span>
+            <span class="lang-es">Preguntas Frecuentes</span>
+        </h2>
+
+        <div class="faq-container">
+            <div class="faq-grid">
+                
+                <div>
+                    <details>
+                        <summary><span class="lang-en">Do I need to live in Paraguay?</span><span class="lang-es">¿Necesito vivir en Paraguay?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">No. You only need to visit once every 3 years to keep the document active.</span>
+                            <span class="lang-es">No. Solo necesita visitar una vez cada 3 años para mantener el documento activo.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">How long does it take?</span><span class="lang-es">¿Cuánto tiempo toma?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Typically 90 days for residency approval, and another 30 days for the ID (Cédula).</span>
+                            <span class="lang-es">Típicamente 90 días para la aprobación, y otros 30 días para la Cédula.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Can I bring my family?</span><span class="lang-es">¿Puedo traer a mi familia?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Yes. Spouses and children under 18 can be included with proper documentation.</span>
+                            <span class="lang-es">Sí. Cónyuges e hijos menores de 18 años pueden incluirse con la documentación adecuada.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Is there a medical exam?</span><span class="lang-es">¿Hay examen médico?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Yes, a simplified medical certificate is required upon arrival. I arrange this appointment.</span>
+                            <span class="lang-es">Sí, se requiere un certificado médico simplificado al llegar. Yo organizo esta cita.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Can I work immediately?</span><span class="lang-es">¿Puedo trabajar inmediatamente?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Yes. Once we file your application, you receive a "Precaria" which allows you to work legally.</span>
+                            <span class="lang-es">Sí. Una vez presentada la solicitud, recibe una "Precaria" que le permite trabajar legalmente.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Can I get a Driver's License?</span><span class="lang-es">¿Puedo obtener Licencia de Conducir?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Yes. Once you have your Cédula, you can apply for a Paraguayan driver's license at your local municipality.</span>
+                            <span class="lang-es">Sí. Una vez que tenga su Cédula, puede solicitar una licencia de conducir paraguaya en su municipio local.</span>
+                        </div>
+                    </details>
+                </div>
+
+                <div>
+                    <details>
+                        <summary><span class="lang-en">Do I become a Tax Resident?</span><span class="lang-es">¿Me convierto en Residente Fiscal?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Not automatically. Tax residency usually requires spending 120 days/year in the country.</span>
+                            <span class="lang-es">No automáticamente. La residencia fiscal generalmente requiere pasar 120 días/año en el país.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">What is an Apostille?</span><span class="lang-es">¿Qué es una Apostilla?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">An international authentication seal. Your birth certificate MUST be apostilled in your home country.</span>
+                            <span class="lang-es">Un sello de autenticación internacional. Su certificado de nacimiento DEBE ser apostillado en su país.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Can I open a bank account?</span><span class="lang-es">¿Puedo abrir cuenta bancaria?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Yes, once you have your Cédula (ID card) in hand, you can open a local account.</span>
+                            <span class="lang-es">Sí, una vez que tenga su Cédula en mano, puede abrir una cuenta local.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Do I need to speak Spanish?</span><span class="lang-es">¿Necesito hablar español?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">No. I handle all communication with the government authorities for you.</span>
+                            <span class="lang-es">No. Yo manejo toda la comunicación con las autoridades gubernamentales por usted.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Can I apply for Citizenship?</span><span class="lang-es">¿Puedo solicitar la Ciudadanía?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">Yes. After 3 years of permanent residency, you may apply for naturalization if you meet the requirements.</span>
+                            <span class="lang-es">Sí. Después de 3 años de residencia permanente, puede solicitar la naturalización si cumple con los requisitos.</span>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="lang-en">Do I need to invest money?</span><span class="lang-es">¿Necesito invertir dinero?</span></summary>
+                        <div class="faq-answer">
+                            <span class="lang-en">No large investment is required for standard residency. You simply need to prove economic solvency.</span>
+                            <span class="lang-es">No se requiere una gran inversión para la residencia estándar. Simplemente necesita probar solvencia económica.</span>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="text-align: center; padding: 100px 5%;">
+        <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--primary-color); margin-bottom: 20px;">
+            <span class="lang-en">Start Your Application</span>
+            <span class="lang-es">Inicie Su Aplicación</span>
+        </h2>
+        <a href="contact.html" class="btn-main">
+            <span class="lang-en">Contact Grecia Now</span>
+            <span class="lang-es">Contactar a Grecia Ahora</span>
+        </a>
+    </section>
+
+    <script src="nav.js"></script>
+</body>
+</html>
